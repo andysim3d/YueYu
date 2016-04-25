@@ -15,6 +15,20 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from yuyue.about import About
+from yuyue.blog import Blog
+from yuyue.challenges import Challenges
+from yuyue.home import Home
+from yuyue.shop import Shop
+from yuyue.tips import Tips
+
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'home', Home.as_view()),
+    url(r'about', About.as_view()),
+    url(r'blog', Blog.as_view()),
+    url(r'challenges', Challenges.as_view()),
+    url(r'shop', Shop.as_view()),
+    url(r'tips', Tips.as_view()),
+
 ]
