@@ -1,16 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <div class="content-panel">
-        <!-- 2 for each line-->
-        <div class="row">
-            {% for i in ele %}
-
-                <div class="col-xs-6 col-md-6">
+    <!-- 2 for each line-->
+    <div class="row">
+        {% for i in ele %}
+            <div class="col-sm-6">
+                <div class="card yy-card">
                     <img src="{{ i }}"/>
                 </div>
-            {% endfor %}
         </div>
+        {% endfor %}
     </div>
 
 {% endblock %}

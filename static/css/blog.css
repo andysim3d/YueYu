@@ -9,18 +9,25 @@
 }
 
 .navi-opt {
-    margin-top: auto;
+    margin-top: 15px;
     padding-bottom: auto;
     color: white;
-    padding-top: 50%;
+    padding-top: 5px;
+    font-size: 40px;
 }
+
+.navi-opt > a {
+    padding: 2px 2px 2px 2px;
+    color: white;
+}
+
 
 .nav-size {
     height: inherit;
 }
 
 .navi-container {
-    max-width: 970px;
+
     height: 100px;
 }
 
@@ -35,10 +42,14 @@
 
 .bs-docs-footer-links {
     width: 800px;
-    padding-left: 25%;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
+.container {
+    min-height: 90%;
+}
 .bs-docs-footer-links > li {
     display: table-cell;
     width: 1%;
@@ -48,12 +59,41 @@
     color: rgb(225, 225, 225);
 }
 
-.empty-2 {
-    height: 40px;
+.empty-1 {
+    height: 20px;
 }
 
 .content-panel {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 120px;
+    padding-bottom: 120px;
     align-items: center;
+    min-height: 100%;
+}
+
+.yy-card {
+    padding: 20px 20px 20px 20px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* needed for container min-height */
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+    text-decoration: none;
+    color: white;
+    background-color: inherit;
+}
+
+.moved-curser {
+    border: 5px solid transparent;
+    border-collapse: collapse;
+    border-radius: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.moved-curser:hover {
+    border-color: white;
 }

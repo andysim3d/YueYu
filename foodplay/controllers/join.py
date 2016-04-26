@@ -1,8 +1,8 @@
 from django.views.generic import TemplateView
 
 
-class Blog(TemplateView):
-    template_name = 'blog.html'
+class Join(TemplateView):
+    template_name = 'join.html'
 
     def get_context_data(self, **kwargs):
         return {}

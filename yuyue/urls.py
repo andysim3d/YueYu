@@ -15,12 +15,13 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from yuyue.about import About
-from yuyue.blog import Blog
-from yuyue.challenges import Challenges
-from yuyue.home import Home
-from yuyue.shop import Shop
-from yuyue.tips import Tips
+from foodplay.controllers.about import About
+from foodplay.controllers.blog import Blog
+from foodplay.controllers.challenges import Challenges
+from foodplay.controllers.home import Home
+from foodplay.controllers.join import Join
+from foodplay.controllers.shop import Shop
+from foodplay.controllers.tips import Tips
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -30,5 +31,7 @@ urlpatterns = [
     url(r'challenges', Challenges.as_view()),
     url(r'shop', Shop.as_view()),
     url(r'tips', Tips.as_view()),
+    url(r'join', Join.as_view()),
+
 
 ]

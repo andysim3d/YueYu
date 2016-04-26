@@ -18,9 +18,15 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse">
                     <ul class="nav nav-justified">
-                        <li><a href="shop" class="navi-opt">Shop <span class="sr-only">(current)</span></a></li>
-                        <li><a href="blog" class="navi-opt">Blog</a></li>
-                        <li><a href="about" class="navi-opt">About</a></li>
+                        <li class="navi-opt"><a href="shop">
+                            <div class="moved-curser">Shop</div>
+                            <span class="sr-only">(current)</span></a></li>
+                        <li class="navi-opt"><a href="blog">
+                            <div class="moved-curser">Blog</div>
+                        </a></li>
+                        <li class="navi-opt"><a href="about">
+                            <div class="moved-curser">About</div>
+                        </a></li>
                         <li>
                             <div class="container-fluid">
                                 <a class="nav-brand" href="#">
@@ -28,9 +34,15 @@
                                 </a>
                             </div>
                         </li>
-                        <li><a href="tips" class="navi-opt">Tips</a></li>
-                        <li><a href="challenges" class="navi-opt">Challenges</a></li>
-                        <li><a href="join" class="navi-opt">join</a></li>
+                        <li class="navi-opt"><a href="tips">
+                            <div class="moved-curser">Tips</div>
+                        </a></li>
+                        <li class="navi-opt"><a href="challenges">
+                            <div class="moved-curser">Challenges</div>
+                        </a></li>
+                        <li class="navi-opt"><a href="join">
+                            <div class="moved-curser">Join</div>
+                        </a></li>
 
 
                     </ul>
@@ -45,12 +57,11 @@
 
 <!-- really body -->
 <div class="content container">
-    <div class="row">
-        <div class="col-md-8">
-            {% block content %}
-            {% endblock %}
-        </div>
+    <div class="content-panel">
+        {% block content %}
+        {% endblock %}
     </div>
+
 </div>
 
 </body>
@@ -60,18 +71,17 @@
         <p>FOODPLAY, UNION SQUARE, NEWPORK, NY, FOODPLAYOFFICAL@GMAIL.COM</p>
         <p>Instagram:@foodplayoffical</p>
         <ul class="bs-docs-footer-links">
-            <li><a href="home">HOME</a></li>
-            <li>|</li>
-            <li><a href="about">ABOUT</a></li>
-            <li>|</li>
-            <li><a href="tips">TIPS</a></li>
-            <li>|</li>
-            <li><a href="challenges">CHALLENGES</a></li>
-            <li>|</li>
-            <li><a href="#">LOGIN</a></li>
+            <li class="footer-menu"><a href="home">HOME</a></li>
+            <li class="footer-menu">|</li>
+            <li class="footer-menu"><a href="about">ABOUT</a></li>
+            <li class="footer-menu">|</li>
+            <li class="footer-menu"><a href="tips">TIPS</a></li>
+            <li class="footer-menu">|</li>
+            <li class="footer-menu"><a href="challenges">CHALLENGES</a></li>
+            <li class="footer-menu">|</li>
+            <li class="footer-menu"><a href="#">LOGIN</a></li>
         </ul>
-        <div class="empty-2"></div>
+        <div class="empty-1"></div>
     </div>
-    <div class="empty-2"></div>
 </footer>
 </html>
