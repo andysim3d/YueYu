@@ -13,7 +13,7 @@
     padding-bottom: auto;
     color: white;
     padding-top: 5px;
-    font-size: 40px;
+    font-size: 24px;
 }
 
 .navi-opt > a {
@@ -96,4 +96,42 @@ html, body {
 
 .moved-curser:hover {
     border-color: white;
+}
+
+.email-zone{
+    height: 50px;
+    width: 200px;
+    padding: 10px 10px 10px 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.input-group{
+    text-align: center;
+    display: table;
+    margin-bottom: 10px;
+}
+
+.yy-bar{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.yy-content{
+    padding-top: 15px;
+    font-size: 18px;
+}
+.btn-yy{
+    height: 70px;
+    width: 100px;
+    border: none;
+    background-color: #7C335D;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.thumbnail{
+    box-shadow: none;
+    border: none;
+}
+.yy-blog-title{
+    color: #44BDA7;
 }

@@ -1,8 +1,67 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1 class="title">{{ blog.title }}</h1>
-    <div class="content-block">
-        {{ blog.content | safe }}
+    <div class="blog-panel">
+        <div class="row">
+            <div class="col-sm-9">
+                <div class="thumbnail">
+                    <img src="/static/img/blog/big.png"></img>
+                </div>
+            </div>
+
+            <div class="yy-grid">
+                <div class="col-sm-3">
+                    <hr class="yy-bar"/>
+                    <p class="yy-content">Join us to stay up to date
+                       on all things DIY, dessert&cake decoration!</p>
+
+                    <div class="input-group ">
+                        <input type="email" class=" email-zone" placeholder="Email address">
+                        <button type="button" class="btn-yy">Start</button>
+                    </div>
+
+                    <p><b>Instagram:<a href="">@foodplayoffical</a></b></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="thumbnail">
+                    <img src="/static/img/blog/sm_1.png">
+                </div>
+
+            </div>
+            <div class="col-sm-6">
+                <h1 class="yy-blog-title">Foodplay @Wework office</h1>
+                <p class="datetime">Feb 24, 2016</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="thumbnail">
+                    <img src="/static/img/blog/sm_2.png">
+                </div>
+
+            </div>
+            <div class="col-sm-6">
+                <h1 class="yy-blog-title">Foodplay @The New School</h1>
+                <p class="datetime">Feb 22, 2016</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="thumbnail">
+                    <img src="/static/img/blog/sm_3.png">
+                </div>
+
+            </div>
+            <div class="col-sm-6">
+                <h1 class="yy-blog-title">Foodplay @Facebook page</h1>
+                <p class="datetime">Nov 4, 2015</p>
+            </div>
+        </div>
     </div>
 
 {% endblock %}
