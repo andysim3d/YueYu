@@ -23,6 +23,7 @@ from foodplay.controllers.join import Join
 from foodplay.controllers.shop import Shop
 from foodplay.controllers.tips import Tips
 from foodplay.controllers.cheesecake import Cheese
+from foodplay.controllers.popcake import Popcake
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -34,7 +35,9 @@ urlpatterns = [
     url(r'tips', Tips.as_view()),
     url(r'join', Join.as_view()),
     url(r'cheese-cake', Cheese.as_view()),
+    url(r'popcake', Popcake.as_view()),
     url(r'', Home.as_view()),
+
 
 
 ]

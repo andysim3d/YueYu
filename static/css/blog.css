@@ -214,3 +214,12 @@ html, body {
     margin-left: 10%;
     margin-right: 10%;
 }
+.receipt{
+    max-height:400px;
+    float: left;
+}
+
+.wider{
+    margin-left: 5%;
+    margin-right: 5%;
+}
