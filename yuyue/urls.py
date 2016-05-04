@@ -32,6 +32,7 @@ urlpatterns = [
     url(r'shop', Shop.as_view()),
     url(r'tips', Tips.as_view()),
     url(r'join', Join.as_view()),
+    url(r'', Home.as_view()),
 
 
 ]
