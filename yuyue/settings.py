@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = "/home/www/YueYu"#os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -24,8 +24,9 @@ SECRET_KEY = 'a*@l3$&+t+_soi(3+ro6dk+q$f0^qqyl40mz_82$5pzj4-%egt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+#DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []# ['*']
 
 
 # Application definition
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'yuyue.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'templates')] 
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -104,4 +105,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
+#	'/home/www/YueYu/static/',
 ]
