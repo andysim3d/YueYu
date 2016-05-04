@@ -9,11 +9,11 @@
 }
 
 .navi-opt {
-    margin-top: 15px;
+    margin-top: 18px;
     padding-bottom: auto;
     color: white;
     padding-top: 5px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .navi-opt > a {
@@ -28,7 +28,7 @@
 
 .navi-container {
 
-    height: 100px;
+    /*height: 100px;*/
 }
 
 .bs-docs-footer .container-footer {
@@ -49,6 +49,9 @@
 
 .container {
     min-height: 90%;
+    width: inherit;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 .bs-docs-footer-links > li {
     display: table-cell;
@@ -64,7 +67,7 @@
 }
 
 .content-panel {
-    padding-top: 120px;
+    padding-top: 74px;
     padding-bottom: 120px;
     align-items: center;
     min-height: 100%;
@@ -87,9 +90,9 @@ html, body {
 }
 
 .moved-curser {
-    border: 5px solid transparent;
+    border: 2px solid transparent;
     border-collapse: collapse;
-    border-radius: 15px;
+    border-radius: 5px;
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -118,6 +121,8 @@ html, body {
 .yy-content{
     padding-top: 15px;
     font-size: 18px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .btn-yy{
     height: 70px;
@@ -134,4 +139,55 @@ html, body {
 }
 .yy-blog-title{
     color: #44BDA7;
+}
+
+.first_frame{
+    width: 100%;
+    text-align: center;
+
+}
+
+.frame{
+    width: 100%;
+    background-color: white;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.home-shop-button {
+    position: absolute;
+    margin-top: -150px;
+    margin-left: -75px;
+    height:80px;
+    width: 180px;
+    background-color:  #7C335D ;
+    border-style: none;
+    color: white;
+    font-size: 18px;
+}
+
+.align-center{
+    text-align: center;
+}
+
+.middle-panel{
+    align-items: center;
+}
+.shop-card{
+    margin: 30px 30px 30px 30px;
+}
+
+
+.non-padding{
+    margin-top: 0px;
+}
+.vertical-line{
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: black;
+}
+
+.description{
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
 }
