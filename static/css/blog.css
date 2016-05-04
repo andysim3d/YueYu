@@ -53,6 +53,13 @@
     padding-left: 0px;
     padding-right: 0px;
 }
+
+.pad-container{
+    padding-top: 10%;
+    padding-bottom: 10%;
+
+}
+
 .bs-docs-footer-links > li {
     display: table-cell;
     width: 1%;
@@ -147,6 +154,7 @@ html, body {
 
 }
 
+
 .frame{
     width: 100%;
     background-color: white;
@@ -189,5 +197,20 @@ html, body {
 
 .description{
     font-size: 25px;
+    padding-bottom: 4px;
+    padding-top:4px;
     font-family: 'Roboto', sans-serif;
+}
+
+.price{
+    font-size: 30px;
+}
+
+.purple{
+    color: purple;
+}
+
+.shop-detail{
+    margin-left: 10%;
+    margin-right: 10%;
 }
