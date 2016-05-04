@@ -23,8 +23,8 @@ BASE_DIR = "/home/www/YueYu"#os.path.dirname(os.path.dirname(os.path.abspath(__f
 SECRET_KEY = 'a*@l3$&+t+_soi(3+ro6dk+q$f0^qqyl40mz_82$5pzj4-%egt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-#DEBUG = False
+#DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []# ['*']
 
