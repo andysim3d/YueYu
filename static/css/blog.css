@@ -3,6 +3,36 @@
     align-content: center;
 }
 
+.narrow80{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.narrow76{
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.narrow90{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.heigh80{
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.heigh90{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.top3{
+    padding-top: 3%;
+}
+.bottom2{
+    padding-bottom: 2%;
+}
+
 .navi {
     background-color: rgb(75, 176, 158);
     height: inherit;
@@ -41,9 +71,10 @@
 }
 
 .bs-docs-footer-links {
-    width: 800px;
+    width: 500px;
     margin-left: auto;
     margin-right: auto;
+
 
 }
 
@@ -84,6 +115,14 @@
     padding: 20px 20px 20px 20px;
 }
 
+.address{
+    font-size: 18px;
+}
+
+.instgram-addr{
+    font-size: 16px;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -97,11 +136,9 @@ html, body {
 }
 
 .moved-curser {
-    border: 2px solid transparent;
+    border: 3px solid transparent;
     border-collapse: collapse;
-    border-radius: 5px;
-    margin-left: 10%;
-    margin-right: 10%;
+    padding: 5% 20%;
 }
 
 .moved-curser:hover {
@@ -109,8 +146,9 @@ html, body {
 }
 
 .email-zone{
-    height: 50px;
-    width: 200px;
+    font-size: 25px;
+    height: 70px;
+    width: 250px;
     padding: 10px 10px 10px 10px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -132,8 +170,8 @@ html, body {
     margin-right: 5%;
 }
 .btn-yy{
-    height: 70px;
-    width: 100px;
+    height: 50px;
+    width: 180px;
     border: none;
     background-color: #7C335D;
     font-size: 24px;
@@ -146,6 +184,7 @@ html, body {
 }
 .yy-blog-title{
     color: #44BDA7;
+    font-size: 25px;
 }
 
 .first_frame{
@@ -164,10 +203,10 @@ html, body {
 
 .home-shop-button {
     position: absolute;
-    margin-top: -150px;
-    margin-left: -75px;
+    margin-top: -200px;
+    margin-left: -100px;
     height:80px;
-    width: 180px;
+    width: 200px;
     background-color:  #7C335D ;
     border-style: none;
     color: white;
@@ -210,9 +249,17 @@ html, body {
     color: purple;
 }
 
+.shop-detail-left{
+    padding-right: 20%;
+}
+.shop-detail-right{
+    padding-left: 20%;
+}
+
+
 .shop-detail{
-    margin-left: 10%;
-    margin-right: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 .receipt{
     max-height:400px;
@@ -220,6 +267,20 @@ html, body {
 }
 
 .wider{
-    margin-left: 5%;
-    margin-right: 5%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+.product-footer{
+    font-size: 20px;
+
+}
+
+.sign-up{
+    font-size: 20px;
+}
+
+.blog-summary{
+    padding-right: 3%;
+
 }

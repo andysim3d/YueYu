@@ -2,55 +2,65 @@
 {% load staticfiles %}
 <html>
 <head>
-    <title>foodplay</title>
+    <title>dessert decoration</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
 </head>
-<div class="navbar-global">
+<!-- nav bar -->
 
-    <!-- nav bar -->
-
-    <div class="navbar navbar-nav">
-        <nav class="navbar navi navbar-fixed-top">
-            <div class="navi-container navbar-global nav-size">
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse">
-                    <ul class="nav nav-justified">
-                        <li class="navi-opt"><a href="shop">
+<div class="navbar navbar-nav">
+    <nav class="navbar navi navbar-fixed-top">
+        <div class="navi-container navbar-global narrow80 nav-size">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav nav-justified">
+                    <li class="navi-opt">
+                        <a href="shop">
                             <div class="moved-curser">Shop</div>
-                            <span class="sr-only">(current)</span></a></li>
-                        <li class="navi-opt"><a href="blog">
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="navi-opt">
+                        <a href="blog">
                             <div class="moved-curser">Blog</div>
-                        </a></li>
-                        <li class="navi-opt"><a href="about">
+                        </a>
+                    </li>
+                    <li class="navi-opt">
+                        <a href="about">
                             <div class="moved-curser">About</div>
-                        </a></li>
-                        <li>
-                            <div class="container-fluid">
-                                <a class="nav-brand" href="#">
-                                    <img alt="Brand" src="{% static "img/title.png" %}">
-                                </a>
-                            </div>
-                        </li>
-                        <li class="navi-opt"><a href="tips">
+                        </a>
+                    </li>
+                    <li>
+                        <div class="container-fluid">
+                            <a class="nav-brand" href="#">
+                                <img alt="Brand" src="{% static "img/title.png" %}">
+                            </a>
+                        </div>
+                    </li>
+                    <li class="navi-opt">
+                        <a href="tips">
                             <div class="moved-curser">Tips</div>
-                        </a></li>
-                        <li class="navi-opt"><a href="challenges">
+                        </a>
+                    </li>
+                    <li class="navi-opt">
+                        <a href="challenges">
                             <div class="moved-curser">Challenges</div>
-                        </a></li>
-                        <li class="navi-opt"><a href="join">
+                        </a>
+                    </li>
+                    <li class="navi-opt">
+                        <a href="join">
                             <div class="moved-curser">Join</div>
-                        </a></li>
+                        </a>
+                    </li>
 
 
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-    </div>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
 </div>
 
 <body>
@@ -69,9 +79,13 @@
 <!-- footer -->
 <footer class="bs-docs-footer" role="contentinfo">
     <div class="container-footer">
-        <p>FOODPLAY, UNION SQUARE, NEWPORK, NY, FOODPLAYOFFICAL@GMAIL.COM</p>
-        <p>Instagram:@foodplayoffical</p>
-        <ul class="bs-docs-footer-links">
+        <div class="address top3">
+            <p>DESSERT DECOR, UNION SQUARE, NEW YORK, NY, DESSERTDECOROFFICIAL@GMAIL.COM</p>
+        </div>
+        <div class="instgram-addr">
+            <p>Instagram:@dessertdecor_official</p>
+        </div>
+        <ul class="bs-docs-footer-links top3">
             <li class="footer-menu"><a href="home">HOME</a></li>
             <li class="footer-menu">|</li>
             <li class="footer-menu"><a href="about">ABOUT</a></li>
@@ -82,6 +96,7 @@
             <li class="footer-menu">|</li>
             <li class="footer-menu"><a href="#">LOGIN</a></li>
         </ul>
+        <div class="empty-1"></div>
         <div class="empty-1"></div>
     </div>
 </footer>

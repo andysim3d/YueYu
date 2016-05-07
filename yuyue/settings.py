@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-
-BASE_DIR = "/home/www/YueYu"#os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#"/home/www/YueYu"#
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -23,10 +23,10 @@ BASE_DIR = "/home/www/YueYu"#os.path.dirname(os.path.dirname(os.path.abspath(__f
 SECRET_KEY = 'a*@l3$&+t+_soi(3+ro6dk+q$f0^qqyl40mz_82$5pzj4-%egt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
-DEBUG = False
+DEBUG = True
+#DEBUG = False
 
-ALLOWED_HOSTS = []# ['*']
+ALLOWED_HOSTS = ['*']# ['*']
 
 
 # Application definition
@@ -79,8 +79,8 @@ WSGI_APPLICATION = 'yuyue.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+     #   'ENGINE': 'django.db.backends.sqlite3',
+     #   'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
