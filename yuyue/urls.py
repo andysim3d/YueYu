@@ -24,6 +24,9 @@ from foodplay.controllers.shop import Shop
 from foodplay.controllers.tips import Tips
 from foodplay.controllers.cheesecake import Cheese
 from foodplay.controllers.popcake import Popcake
+from foodplay.controllers.flowercookies import Flower
+from foodplay.controllers.newschool import Article
+from foodplay.controllers.facebook import Facebook
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -36,7 +39,11 @@ urlpatterns = [
     url(r'join', Join.as_view()),
     url(r'cheese-cake', Cheese.as_view()),
     url(r'popcake', Popcake.as_view()),
+    url(r'butter-cookie', Flower.as_view()),
+    url(r'wework', Article.as_view()),
+    url(r'facebook', Facebook.as_view()),
     url(r'', Home.as_view()),
+
 
 
 

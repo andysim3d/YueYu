@@ -127,6 +127,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%; /* needed for container min-height */
+    font-family: "Lantinghei SC";
 }
 
 .nav > li > a:focus, .nav > li > a:hover {
@@ -173,7 +174,7 @@ html, body {
     height: 50px;
     width: 180px;
     border: none;
-    background-color: #7C335D;
+    background-color: #efaaa9;
     font-size: 24px;
     color: #FFFFFF;
 }
@@ -207,7 +208,7 @@ html, body {
     margin-left: -100px;
     height:80px;
     width: 200px;
-    background-color:  #7C335D ;
+    background-color:  #efaaa9 ;
     border-style: none;
     color: white;
     font-size: 18px;
@@ -238,7 +239,7 @@ html, body {
     font-size: 25px;
     padding-bottom: 4px;
     padding-top:4px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lantinghei SC';
 }
 
 .price{
