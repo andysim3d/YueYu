@@ -205,7 +205,6 @@ html, body {
 
 }
 
-
 .frame{
     width: 100%;
     background-color: white;
@@ -213,11 +212,21 @@ html, body {
     margin-top: 2px;
 }
 
+.frame2{
+    width: 100%;
+    background-color: #efaaa9;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    font-weight: 900;
+    color: white;
+    font-size: 30px;
+}
+
 .home-shop-button {
     position: absolute;
-    margin-top: -200px;
+    margin-top: -230px;
     margin-left: -100px;
-    height:80px;
+    height:60px;
     width: 200px;
     background-color:  #efaaa9 ;
     border-style: none;
@@ -225,6 +234,13 @@ html, body {
     font-size: 18px;
 }
 
+.top1px{
+    padding-top: 0px;
+}
+.email-zone2{
+    padding-top: -1px;
+    height: 50px;
+}
 .align-center{
     text-align: center;
 }
