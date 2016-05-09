@@ -212,6 +212,14 @@ html, body {
     margin-top: 2px;
 }
 
+.navbar-brand2 {
+    float: right;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
 .frame2{
     width: 100%;
     background-color: #efaaa9;
