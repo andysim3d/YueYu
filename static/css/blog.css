@@ -354,3 +354,19 @@ html, body {
     font-weight: 200;
     padding-bottom: 20px;
 }
+
+.article-content{
+    font-size: 17px;
+}
+.article-content >p{
+    font-size: 17px;
+    line-height: 180%;
+}
+.article-date{
+    color: darkgray;
+}
+.article-title{
+    color: #44BDA7;
+    font-size: 20px;
+    padding-bottom: 3%;
+}
