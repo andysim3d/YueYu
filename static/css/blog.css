@@ -76,6 +76,7 @@
     width: 500px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 100;
 
 
 }
@@ -118,9 +119,12 @@
 }
 
 .address{
-    font-size: 18px;
+    font-size: 15px;
 }
 
+.navbar-brand{
+    padding-top: 5px;
+}
 .instgram-addr{
     font-size: 16px;
 }
@@ -242,9 +246,15 @@ html, body {
     border-right-color: black;
 }
 
+
+.quantity{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 .description{
     font-size: 20px;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
     padding-top:4px;
     font-family: 'Lantinghei SC';
 }
@@ -273,7 +283,7 @@ html, body {
     padding-right: 10%;
 }
 .receipt{
-    color: darkgrey;
+    font-weight: 100;
     font-size: 18px;
     float: left;
 }
@@ -313,10 +323,18 @@ html, body {
 }
 .sm-title{
     font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
     font-weight: 500;
 }
 
 .title-shop{
     font-weight: 500;
     font-size: 20px;
+}
+
+.product-content{
+    font-size: 16px;
+    font-weight: 200;
+    padding-bottom: 20px;
 }
