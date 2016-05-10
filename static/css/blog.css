@@ -400,25 +400,25 @@ html, body {
 
 
 .about-title{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     padding-top: 3%;
     padding-bottom: 5%;
 }
 .about-content{
-    font-size: 25px;
+    font-size: 20px;
     padding-bottom: 5%;
     line-height: 180%;
 }
 
 .about-button{
     border-style: solid;
-    border-width: 5px;
-    font-size: 30px;
+    border-width: 3px;
+    font-size: 25px;
     color: orange;
     border-color: orange;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 27%;
+    margin-right: 27%;
     padding-top: 2%;
     padding-bottom: 2%;
     border-radius: 5px;
