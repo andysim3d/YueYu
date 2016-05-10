@@ -46,6 +46,11 @@
     padding-bottom: auto;
     color: white;
     font-size: 18px;
+    width: 150px;
+}
+
+li.navi-opt{
+    width: 190px;
 }
 
 .navi-opt > a {
@@ -213,11 +218,10 @@ html, body {
 }
 
 .navbar-brand2 {
-    float: right;
     height: 50px;
-    padding-top: 5px;
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 70px;
     margin-bottom: 5px;
     font-size: 18px;
     line-height: 20px;
@@ -336,6 +340,8 @@ html, body {
 
 .brand-yy{
     max-width: 150px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .Add-tocart{
     margin: 10px 0px;
