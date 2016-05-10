@@ -214,7 +214,6 @@ html, body {
     width: 100%;
     background-color: white;
     margin-bottom: 2px;
-    margin-top: 2px;
 }
 
 .navbar-brand2 {
@@ -341,7 +340,7 @@ html, body {
 .brand-yy{
     max-width: 150px;
     margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 .Add-tocart{
     margin: 10px 0px;
@@ -390,4 +389,34 @@ html, body {
 
 .unaval{
 	-webkit-filter: grayscale(90%);
+}
+
+
+.about-title{
+    font-size: 30px;
+    font-weight: 400;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+.about-content{
+    font-size: 25px;
+    padding-bottom: 5%;
+    line-height: 180%;
+}
+
+.about-button{
+    border-style: solid;
+    border-width: 5px;
+    font-size: 30px;
+    color: orange;
+    border-color: orange;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 5px;
+}
+
+.orange-color{
+    color: orange;
 }
