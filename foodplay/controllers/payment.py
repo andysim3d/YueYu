@@ -14,7 +14,7 @@ class Pay(TemplateView):
         temp = get_template("pay.html")
         paypalform = PaypalForm()
         html = temp.render(Context({'form': paypalform}))
-        return HttpResponse(temp)
+        return HttpResponse(html)
 
 
         # def get(self, request,*args, **kwargs):
