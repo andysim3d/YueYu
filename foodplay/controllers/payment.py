@@ -1,6 +1,7 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.template.loader import get_template
+from django.views.decorators.csrf import ensure_csrf_cookie
 from django.views.generic import TemplateView
 
 from foodplay.forms.paymentform import PaypalForm
@@ -8,7 +9,8 @@ from foodplay.forms.paymentform import PaypalForm
 
 class Pay(TemplateView):
     template_name = 'pay.html'
-
+    
+    @ensure_csrf_cookie
     def get(self, request):
         pass
         temp = get_template("pay.html")
