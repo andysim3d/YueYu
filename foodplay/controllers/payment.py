@@ -13,7 +13,7 @@ class Pay(TemplateView):
         pass
         temp = get_template("pay.html")
         paypalform = PaypalForm()
-        html = RequestContext({'form': paypalform})
+        html = RequestContext(request, {'form': paypalform})
         return render_to_response("pay.html", html)
 
 
