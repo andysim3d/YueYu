@@ -8,8 +8,10 @@ class Blog(models.Model):
 
 class Payhistory(models.Model):
     id = models.AutoField(primary_key=True)
-    item_name = models.CharField(max_length=255)
-    type = models.CharField(max_length=16, choices=('visa', 'American Express', 'discover', 'Master'))
+    type = models.CharField(max_length=16, choices=(('visa', 'visa'),
+                                                    ('American Express', "amex"),
+                                                    ('discover', 'discover'),
+                                                    ('Master', 'master'),))
     number = models.CharField(max_length=32)
     expire_month = models.IntegerField()
     expire_year = models.IntegerField()
