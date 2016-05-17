@@ -18,15 +18,16 @@ from django.contrib import admin
 from foodplay.controllers.about import About
 from foodplay.controllers.blog import Blog
 from foodplay.controllers.challenges import Challenges
+from foodplay.controllers.cheesecake import Cheese
+from foodplay.controllers.facebook import Facebook
+from foodplay.controllers.flowercookies import Flower
 from foodplay.controllers.home import Home
 from foodplay.controllers.join import Join
+from foodplay.controllers.newschool import Article
+from foodplay.controllers.payment import Pay
+from foodplay.controllers.popcake import Popcake
 from foodplay.controllers.shop import Shop
 from foodplay.controllers.tips import Tips
-from foodplay.controllers.cheesecake import Cheese
-from foodplay.controllers.popcake import Popcake
-from foodplay.controllers.flowercookies import Flower
-from foodplay.controllers.newschool import Article
-from foodplay.controllers.facebook import Facebook
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -42,6 +43,7 @@ urlpatterns = [
     url(r'butter-cookie', Flower.as_view()),
     url(r'wework', Article.as_view()),
     url(r'facebook', Facebook.as_view()),
+    url(r'pay', Pay.as_view()),
     url(r'', Home.as_view()),
 
 

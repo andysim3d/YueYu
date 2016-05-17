@@ -6,6 +6,22 @@ class Blog(models.Model):
     blog_content = models.TextField(max_length=65535)
 
 
-class payhistory(models.Model):
+class Payhistory(models.Model):
     id = models.AutoField(primary_key=True)
     item_name = models.CharField(max_length=255)
+    type = models.CharField(max_length=16, choices=('visa', 'American Express', 'discover', 'Master'))
+    number = models.CharField(max_length=32)
+    expire_month = models.IntegerField()
+    expire_year = models.IntegerField()
+    cvv2 = models.IntegerField()
+    first_name = models.CharField(max_length=32)
+    last_name = models.CharField(max_length=32)
+
+
+class Items(models.Model):
+    name = models.CharField(max_length=255)
+    sku = models.AutoField(primary_key=True)
+    price = models.FloatField()
+    currency = "USD"
+    quantity = 1
+    desctiption = models.TextField()

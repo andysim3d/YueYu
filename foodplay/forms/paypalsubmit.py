@@ -1,4 +1,7 @@
 import paypalrestsdk
+from django.forms import model_to_dict
+
+from foodplay.models import Items
 
 api_info = paypalrestsdk.Api(
     {
@@ -16,9 +19,11 @@ class paypal(object):
     # payment info is a dict, with detail informations
 
     # create payment, and execute
-    def handler(self, paymentinfo):
+    def handler(self, paymentinfo, item):
+        item_info = paypal.convert_items(item)
+        pinfo = paypal.convertpaymentinfo(paymentinfo, item_info)
         payment = paypalrestsdk.Payment(
-            paymentinfo,
+            pinfo,
             api=api_info,
         )
 
@@ -28,12 +33,26 @@ class paypal(object):
             raise ValueError(payment.error)
 
     @staticmethod
-    def convertpaymentinfo(payment):
+    def convertpaymentinfo(payment_info, item_info):
         pinfo = dict()
         try:
-            pinfo['intent'] = payment.get("intent", "sale")
-            pinfo['payer']['payment_method'] = payment.get("payment_method", "paypal")
+            pinfo['intent'] = ("sale")
+            pinfo['payer'] = {}
+            pinfo['payer']['payment_method'] = 'credit_card'
+            pinfo['payer']['funding_instruments'] = payment_info
 
-
+            pinfo['transactions'] = [{"item_list": item_info}]
         except Exception as E:
             raise E
+        return pinfo
+
+    @staticmethod
+    def convert_items(item):
+        item_id = item.get('id', 1)
+        ite = Items.objects.get(sku=item_id)
+        item_info = model_to_dict(ite)
+        items_info = dict()
+        items_info['item_list'] = {item_info}
+        items_info['amount'] = {'total': item_info['price'], "currency": "USD"}
+        items_info['description'] = item_info['description']
+        return items_info
