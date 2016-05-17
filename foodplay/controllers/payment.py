@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.template import Context
 from django.template.loader import get_template
 from django.views.generic import TemplateView
@@ -12,8 +13,8 @@ class Pay(TemplateView):
         pass
         temp = get_template("pay.html")
         paypalform = PaypalForm()
-        temp.render(Context({'form': paypalform}))
-        return temp
+        html = temp.render(Context({'form': paypalform}))
+        return HttpResponse(temp)
 
 
         # def get(self, request,*args, **kwargs):
