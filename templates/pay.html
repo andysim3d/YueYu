@@ -3,8 +3,12 @@
 
     <!-- 2 for each line-->
     <h1>New post</h1>
-    <form method="POST" class="post-form">{% csrf_token %}
+    <form method="POST" class="post-form">
+        {% csrf_token %}
         {{ form.as_p }}
+        <div style="display:none">
+            <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+        </div>
         <button type="submit" class="save btn btn-default">Save</button>
     </form>
 
