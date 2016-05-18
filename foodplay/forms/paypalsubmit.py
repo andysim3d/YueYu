@@ -19,11 +19,8 @@ class paypal(object):
 
     # create payment, and execute
     def handler(self, paymentinfo):
-        item = paymentinfo.item
-        item_info = paypal.convert_items(item)
-        pinfo = paypal.convertpaymentinfo(paymentinfo, item_info)
         payment = paypalrestsdk.Payment(
-            pinfo,
+            paymentinfo,
             api=api_info,
         )
 
