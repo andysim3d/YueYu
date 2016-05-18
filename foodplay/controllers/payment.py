@@ -1,10 +1,10 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from foodplay.models import Items
 from django.template.loader import get_template
 from django.views.generic import TemplateView
 
 from foodplay.forms.paymentform import PaypalForm
+from foodplay.models import Items
 
 
 class Pay(TemplateView):
@@ -27,6 +27,7 @@ class Pay(TemplateView):
 
         temp = get_template("pay.html")
         paypalform = PaypalForm(request.POST)
+        paypalform.save()
 
         html = RequestContext(request, {'form': paypalform, "info": "succeed!!!"})
         return render_to_response("pay.html", html)
