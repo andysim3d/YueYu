@@ -29,6 +29,8 @@ class Pay(TemplateView):
 
         temp = get_template("pay.html")
         paypalform = PaypalForm(request.POST)
+        html = RequestContext(request, {'form': paypalform})
+
         if paypalform.is_valid():
             model_instance = paypalform.save(commit=False)
             model_instance.item = prod
@@ -39,6 +41,6 @@ class Pay(TemplateView):
 
             except Exception as E:
                 pass
-
             html = RequestContext(request, {'form': paypalform, "info": payinfo})
+
         return render_to_response("pay.html", html)
