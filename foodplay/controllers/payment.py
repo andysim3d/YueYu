@@ -27,7 +27,7 @@ class Pay(TemplateView):
 
         temp = get_template("pay.html")
         paypalform = PaypalForm(request.POST)
-        if paypalform.validate():
+        if paypalform.is_valid():
             model_instance = paypalform.save(commit=False)
             model_instance.item = prod
             model_instance.save()
