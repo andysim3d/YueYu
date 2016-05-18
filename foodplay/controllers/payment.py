@@ -26,7 +26,7 @@ class Pay(TemplateView):
         prod = Items.objects.get(sku=pro_id)
 
         temp = get_template("pay.html")
-        paypalform = PaypalForm()
+        paypalform = PaypalForm(request.POST)
 
         html = RequestContext(request, {'form': paypalform, "info": "succeed!!!"})
         return render_to_response("pay.html", html)
