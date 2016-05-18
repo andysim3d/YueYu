@@ -18,7 +18,7 @@ class Payhistory(models.Model):
     cvv2 = models.IntegerField()
     first_name = models.CharField(max_length=32)
     last_name = models.CharField(max_length=32)
-    item = models.OneToOneRel(Items)
+    item = models.OneToOneField(Items)
 
 class Items(models.Model):
     name = models.CharField(max_length=255)
