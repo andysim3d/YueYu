@@ -27,7 +27,9 @@ class Pay(TemplateView):
 
         temp = get_template("pay.html")
         paypalform = PaypalForm(request.POST)
-        paypalform.save()
+        paypayinfo = paypalform.get_model()
+        paypayinfo.item = prod
+        paypayinfo.save()
 
         html = RequestContext(request, {'form': paypalform, "info": "succeed!!!"})
         return render_to_response("pay.html", html)
