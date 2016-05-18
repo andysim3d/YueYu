@@ -11,10 +11,7 @@ class Pay(TemplateView):
     template_name = 'pay.html'
 
     def get(self, request):
-        pro_id = request.GET.get('id', 1)
-        prod = Items.objects.get(sku=pro_id)
         paypalform = PaypalForm()
-        paypalform['item'].value = prod
 
         html = RequestContext(request, {'form': paypalform})
         return render_to_response("pay.html", html)
@@ -25,6 +22,9 @@ class Pay(TemplateView):
         #     return context
 
     def post(self, request):
+        pro_id = request.GET.get('id', 1)
+        prod = Items.objects.get(sku=pro_id)
+
         temp = get_template("pay.html")
         paypalform = PaypalForm()
 
