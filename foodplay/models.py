@@ -28,4 +28,4 @@ class Payhistory(models.Model):
     cvv2 = models.IntegerField()
     first_name = models.CharField(max_length=32)
     last_name = models.CharField(max_length=32)
-    item = models.ForeignKey(Items, to_field=Items.sku)
+    item = models.ForeignKey(Items)
