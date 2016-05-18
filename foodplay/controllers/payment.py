@@ -1,9 +1,11 @@
+from django.forms import model_to_dict
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.template.loader import get_template
 from django.views.generic import TemplateView
 
 from foodplay.forms.paymentform import PaypalForm
+from foodplay.forms.paypalsubmit import paypal
 from foodplay.models import Items
 
 
@@ -31,6 +33,12 @@ class Pay(TemplateView):
             model_instance = paypalform.save(commit=False)
             model_instance.item = prod
             model_instance.save()
+            payinfo = model_to_dict(model_instance)
+            try:
+                d = paypal()
 
-            html = RequestContext(request, {'form': paypalform, "info": "succeed!!!"})
+            except Exception as E:
+                pass
+
+            html = RequestContext(request, {'form': paypalform, "info": payinfo})
         return render_to_response("pay.html", html)
