@@ -43,7 +43,9 @@ class Pay(TemplateView):
                 d = paypal()
                 item = paypal.convert_items(prod)
                 payinfo = paypal.convertpaymentinfo(model_instance, item)
-                if (d.handler(payinfo)):
+                q = d.handler(payinfo)
+                payinfo['result'] = q
+                if (q):
                     logging.debug("not succeed")
                     HttpResponseRedirect('/thanks/')
                 else:
