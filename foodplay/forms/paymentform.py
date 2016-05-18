@@ -1,10 +1,11 @@
 from django.forms import ModelForm
-from foodplay.models import Payhistory
+
+from foodplay.models import CardInformations
 
 
 class PaypalForm(ModelForm):
     class Meta:
-        model = Payhistory
+        model = CardInformations
         fields = ['id', 'type', 'number',
                   'expire_month', 'expire_year',
                   'cvv2', 'first_name', 'last_name']

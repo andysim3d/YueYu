@@ -7,7 +7,7 @@ class Blog(models.Model):
     blog_content = models.TextField(max_length=65535)
 
 
-class Items(models.Model):
+class Products(models.Model):
     name = models.CharField(max_length=255)
     sku = models.AutoField(primary_key=True)
     price = models.FloatField()
@@ -16,7 +16,7 @@ class Items(models.Model):
     description = models.TextField()
 
 
-class Payhistory(models.Model):
+class CardInformations(models.Model):
     id = models.AutoField(primary_key=True)
     type = models.CharField(max_length=16, choices=(('visa', 'visa'),
                                                     ('American Express', "amex"),
@@ -28,4 +28,4 @@ class Payhistory(models.Model):
     cvv2 = models.IntegerField()
     first_name = models.CharField(max_length=32)
     last_name = models.CharField(max_length=32)
-    item = models.ForeignKey(Items)
+    item = models.ForeignKey(Products)

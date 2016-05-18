@@ -1,7 +1,7 @@
 import paypalrestsdk
 from django.forms import model_to_dict
 
-from foodplay.models import Items
+from foodplay.models import Products
 
 api_info = paypalrestsdk.Api(
     {
@@ -49,7 +49,7 @@ class paypal(object):
     @staticmethod
     def convert_items(item):
         item_id = item.get('id', 1)
-        ite = Items.objects.get(sku=item_id)
+        ite = Products.objects.get(sku=item_id)
         item_info = model_to_dict(ite)
         items_info = dict()
         items_info['item_list'] = {item_info}

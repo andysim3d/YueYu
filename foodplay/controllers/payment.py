@@ -6,7 +6,7 @@ from django.views.generic import TemplateView
 
 from foodplay.forms.paymentform import PaypalForm
 from foodplay.forms.paypalsubmit import paypal
-from foodplay.models import Items
+from foodplay.models import Products
 
 
 class Pay(TemplateView):
@@ -25,7 +25,7 @@ class Pay(TemplateView):
 
     def post(self, request):
         pro_id = request.GET.get('id', 1)
-        prod = Items.objects.get(sku=pro_id)
+        prod = Products.objects.get(sku=pro_id)
 
         temp = get_template("pay.html")
         paypalform = PaypalForm(request.POST)
