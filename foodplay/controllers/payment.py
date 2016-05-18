@@ -1,3 +1,5 @@
+import logging
+
 from django.forms import model_to_dict
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
@@ -42,6 +44,7 @@ class Pay(TemplateView):
                 item = paypal.convert_items(prod)
                 payinfo = paypal.convertpaymentinfo(model_instance, item)
                 if (d.handler(payinfo)):
+                    logging.debug("not succeed")
                     HttpResponseRedirect('/thanks/')
                 else:
                     HttpResponseRedirect('/failed/?reason=' + d.getError())
