@@ -1,9 +1,11 @@
 from django.db import models
 
+
 class Blog(models.Model):
     id = models.AutoField(primary_key=True)
     blog_title = models.TextField(max_length=256)
     blog_content = models.TextField(max_length=65535)
+
 
 class Items(models.Model):
     name = models.CharField(max_length=255)
@@ -11,7 +13,8 @@ class Items(models.Model):
     price = models.FloatField()
     currency = "USD"
     quantity = 1
-    desctiption = models.TextField()
+    description = models.TextField()
+
 
 class Payhistory(models.Model):
     id = models.AutoField(primary_key=True)
@@ -25,4 +28,4 @@ class Payhistory(models.Model):
     cvv2 = models.IntegerField()
     first_name = models.CharField(max_length=32)
     last_name = models.CharField(max_length=32)
-    item = models.ForeignKey(Items)
+    item = models.ForeignKey(Items, to_field=Items.sku)
