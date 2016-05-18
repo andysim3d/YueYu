@@ -1,4 +1,5 @@
 from django.forms import model_to_dict
+from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.template.loader import get_template
@@ -38,9 +39,13 @@ class Pay(TemplateView):
             payinfo = model_to_dict(model_instance)
             try:
                 d = paypal()
-
+                item = paypal.convert_items(prod)
+                payinfo = paypal.convertpaymentinfo(model_instance, item)
+                if (d.handler(payinfo)):
+                    HttpResponseRedirect('/thanks/')
             except Exception as E:
                 pass
+                HttpResponseRedirect('/failed/?reason=' + E.message)
             html = RequestContext(request, {'form': paypalform, "info": payinfo})
 
         return render_to_response("pay.html", html)

@@ -1,8 +1,6 @@
 import paypalrestsdk
 from django.forms import model_to_dict
 
-from foodplay.models import Products
-
 api_info = paypalrestsdk.Api(
     {
         'mode': 'sandbox',
@@ -19,7 +17,8 @@ class paypal(object):
     # payment info is a dict, with detail informations
 
     # create payment, and execute
-    def handler(self, paymentinfo, item):
+    def handler(self, paymentinfo):
+        item = paymentinfo.item
         item_info = paypal.convert_items(item)
         pinfo = paypal.convertpaymentinfo(paymentinfo, item_info)
         payment = paypalrestsdk.Payment(
@@ -31,6 +30,8 @@ class paypal(object):
             raise ValueError("payment create error")
         if not payment.execute():
             raise ValueError(payment.error)
+        return True
+
 
     @staticmethod
     def convertpaymentinfo(payment_info, item_info):
@@ -39,7 +40,7 @@ class paypal(object):
             pinfo['intent'] = ("sale")
             pinfo['payer'] = {}
             pinfo['payer']['payment_method'] = 'credit_card'
-            pinfo['payer']['funding_instruments'] = payment_info
+            pinfo['payer']['funding_instruments'] = [model_to_dict(payment_info)]
 
             pinfo['transactions'] = [{"item_list": item_info}]
         except Exception as E:
@@ -48,11 +49,11 @@ class paypal(object):
 
     @staticmethod
     def convert_items(item):
-        item_id = item.get('id', 1)
-        ite = Products.objects.get(sku=item_id)
-        item_info = model_to_dict(ite)
-        items_info = dict()
-        items_info['item_list'] = {item_info}
-        items_info['amount'] = {'total': item_info['price'], "currency": "USD"}
-        items_info['description'] = item_info['description']
-        return items_info
+        items = model_to_dict(item)
+        items['quantity'] = 1
+        items['currency'] = "USD"
+        item_info = dict()
+        item_info['items'] = [items]
+        item_info['amount'] = {'total': 1, 'currency': "USD"}
+        item_info["description"] = items["description"]
+        return item_info
