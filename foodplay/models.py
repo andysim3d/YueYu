@@ -5,6 +5,13 @@ class Blog(models.Model):
     blog_title = models.TextField(max_length=256)
     blog_content = models.TextField(max_length=65535)
 
+class Items(models.Model):
+    name = models.CharField(max_length=255)
+    sku = models.AutoField(primary_key=True)
+    price = models.FloatField()
+    currency = "USD"
+    quantity = 1
+    desctiption = models.TextField()
 
 class Payhistory(models.Model):
     id = models.AutoField(primary_key=True)
@@ -20,10 +27,3 @@ class Payhistory(models.Model):
     last_name = models.CharField(max_length=32)
     item = models.OneToOneField(Items)
 
-class Items(models.Model):
-    name = models.CharField(max_length=255)
-    sku = models.AutoField(primary_key=True)
-    price = models.FloatField()
-    currency = "USD"
-    quantity = 1
-    desctiption = models.TextField()
