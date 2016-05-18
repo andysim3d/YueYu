@@ -43,6 +43,9 @@ class Pay(TemplateView):
                 payinfo = paypal.convertpaymentinfo(model_instance, item)
                 if (d.handler(payinfo)):
                     HttpResponseRedirect('/thanks/')
+                else:
+                    HttpResponseRedirect('/failed/?reason=' + d.getError())
+
             except Exception as E:
                 pass
                 HttpResponseRedirect('/failed/?reason=' + E.message)

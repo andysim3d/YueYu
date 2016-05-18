@@ -13,6 +13,7 @@ api_info = paypalrestsdk.Api(
 class paypal(object):
     def __init__(self):
         self.api = api_info
+        self.Error = None
 
     # payment info is a dict, with detail informations
 
@@ -27,10 +28,17 @@ class paypal(object):
         )
 
         if not payment.create():
+            self.Error = payment.error
             raise ValueError("payment create error")
-        if not payment.execute():
-            raise ValueError(payment.error)
+        if not self.payment.execute():
+            self.Error = payment.error
+            raise ValueError(self.payment.error)
         return True
+
+    def getError(self):
+        if self.payment is None:
+            return "nothing"
+        return self.Error
 
 
     @staticmethod
