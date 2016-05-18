@@ -52,7 +52,8 @@ class Pay(TemplateView):
                     return HttpResponseRedirect('/failed/?reason=' + d.getError())
 
             except Exception as E:
-                return HttpResponseRedirect('/failed/?reason=' + E.message)
+                return HttpResponseRedirect('/failed/?reas=' + E.message)
+                return HttpResponseRedirect('/failed/?reas=' + E.message)
             html = RequestContext(request, {'form': paypalform, "info": payinfo})
 
         return render_to_response("pay.html", html)
