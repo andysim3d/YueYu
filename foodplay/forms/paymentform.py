@@ -1,17 +1,13 @@
 from django.forms import ModelForm
-from django import forms
-from django.db import models
-
 from foodplay.models import Payhistory
 
 
 class PaypalForm(ModelForm):
-    price = models.CharField(widget= forms.HiddenInput())
     class Meta:
         model = Payhistory
         fields = ['id', 'type', 'number',
                   'expire_month', 'expire_year',
-                  'cvv2', 'first_name', 'last_name']
+                  'cvv2', 'first_name', 'last_name', 'item']
 
 
 '''
