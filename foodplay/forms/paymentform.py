@@ -7,7 +7,7 @@ class PaypalForm(ModelForm):
         model = Payhistory
         fields = ['id', 'type', 'number',
                   'expire_month', 'expire_year',
-                  'cvv2', 'first_name', 'last_name', 'item']
+                  'cvv2', 'first_name', 'last_name']
 
 
 '''
