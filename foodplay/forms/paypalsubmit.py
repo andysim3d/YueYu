@@ -26,7 +26,7 @@ class paypal(object):
 
         if not payment.create():
             self.Error = payment.error
-            raise ValueError("payment create error")
+            raise ValueError(payment.error)
         if not self.payment.execute():
             self.Error = payment.error
             raise ValueError(self.payment.error)
