@@ -2,11 +2,17 @@
 {% block content %}
 
     <!-- 2 for each line-->
-    <h1>New post</h1>
+    <div class="narrow80">
+    <div class="narrow80">
+
+    <h1>Credit Card Information</h1>
     <form method="POST" class="post-form">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">check out</button>
     </form>
-    {{ info }}
+
+
+    </div>
+    </div>
 {% endblock %}
