@@ -45,7 +45,7 @@ class paypal(object):
             pinfo['intent'] = ("sale")
             pinfo['payer'] = {}
             pinfo['payer']['payment_method'] = 'credit_card'
-            pinfo['payer']['funding_instruments'] = [model_to_dict(payment_info)]
+            pinfo['payer']['funding_instruments'] = [{"credit_card": model_to_dict(payment_info)}]
 
             pinfo['transactions'] = [{"item_list": item_info}]
         except Exception as E:
