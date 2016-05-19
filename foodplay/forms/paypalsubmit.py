@@ -42,13 +42,20 @@ class paypal(object):
     def convertpaymentinfo(payment_info, item_info):
         pinfo = dict()
         try:
-            card_info = model_to_dict(payment_info)
-            del card_info['item']
-            del card_info['id']
+            card_info_raw = model_to_dict(payment_info)
+            card_info = {
+                'cvv2':card_info_raw['cvv2'],
+                'expire_month' : card_info_raw['expire_month'],
+                'expire_year' : card_info_raw['expire_year'],
+                'last_name': card_info_raw['last_name'],
+                'first_name': card_info_raw['first_name'],
+                'number': card_info_raw['number'],
+                'type': card_info_raw['type'],
+            }
             pinfo['intent'] = ("sale")
             pinfo['payer'] = {}
             pinfo['payer']['payment_method'] = 'credit_card'
-            pinfo['payer']['funding_instruments'] = [{"credit_card": model_to_dict(payment_info)}]
+            pinfo['payer']['funding_instruments'] = [{"credit_card": card_info}]
 
             pinfo['transactions'] = [item_info]
         except Exception as E:
