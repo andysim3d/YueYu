@@ -55,10 +55,10 @@ class paypal(object):
     @staticmethod
     def convert_items(item):
         items = model_to_dict(item)
-        items['quantity'] = 1
-        items['currency'] = "USD"
+        # items['quantity'] = 1
+        # items['currency'] = "USD"
         item_info = dict()
-        item_info['items'] = [items]
-        item_info['amount'] = {'total': 1, 'currency': "USD"}
+        # item_info['items'] = [items]
+        item_info['amount'] = {'total': items.get("price", 1), 'currency': "USD"}
         item_info["description"] = items["description"]
         return item_info
