@@ -27,13 +27,13 @@ class paypal(object):
         if not payment.create():
             self.Error = payment.error
             raise ValueError(payment.error)
-        if not self.payment.execute():
+        if not payment.execute():
             self.Error = payment.error
-            raise ValueError(self.payment.error)
+            raise ValueError(payment.error)
         return True
 
     def getError(self):
-        if self.payment is None:
+        if self.Error is None:
             return "nothing"
         return self.Error
 
