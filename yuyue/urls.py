@@ -28,6 +28,7 @@ from foodplay.controllers.payment import Pay
 from foodplay.controllers.popcake import Popcake
 from foodplay.controllers.shop import Shop
 from foodplay.controllers.tips import Tips
+from foodplay.controllers.thanks import Thanks
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -44,6 +45,7 @@ urlpatterns = [
     url(r'wework', Article.as_view()),
     url(r'facebook', Facebook.as_view()),
     url(r'pay', Pay.as_view()),
+    url(r'thanks', Thanks.as_view()),
     url(r'', Home.as_view()),
 
 
